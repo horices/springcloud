@@ -103,3 +103,6 @@ spring:
 > 启动主服务
 
 > 访问地址： http://localhost:8002 正常打开
+
+
+![服务启动成功](https://github.com/horices/springcloud/blob/master/eureka-server-2.png)
