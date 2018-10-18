@@ -83,13 +83,21 @@ public class ServiceCenterApplication {
 >  修改 application.yml(或者 application.propertites)进行配置
 ```
 server:
-#  port: 8000
+  port: 8002
 eureka:
   client:
-    register-with-eureka: false #表示是否将自己注册到Eureka Server，默认为true。由于当前这个应用就是Eureka Server，故而设为false
+    register-with-eureka: false  #表示是否将自己注册到Eureka Server，默认为true。由于当前这个应用就是Eureka Server，故而设为false
     fetch-registry: false #表示是否从Eureka Server获取注册信息，默认为true。因为这是一个单点的Eureka Server，不需要同步其他的Eureka Server节点的数据，故而设为false。
-    #service-url: 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔。
+  instance:
+    hostname: localhost # 配置实例域名，不配置的话日志中提示会启动一个 localhost:8761/eureka 不清楚原因，
+    #service-url: #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔。为其它服务地址
+     # defaultZone: http://localhost:8761/eureka/
 
+spring:
+  application:
+    name: eurekaServer
+
+         
 ```
 
 > 启动主服务
