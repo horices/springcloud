@@ -105,7 +105,7 @@ server:
 > #### 4.启动Application （需要先启动服务端），
 > > 服务器会自动发现，打开服务端地址，http://localhost:8002 
 
-![服务注册成功](../eureka-server-2.png)
+![服务注册成功](https://github.com/horices/springcloud/blob/master/eureka-server-2.png)
 
 
 
